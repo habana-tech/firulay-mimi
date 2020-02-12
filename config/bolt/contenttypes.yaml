@@ -94,6 +94,46 @@ pages:
     recordsperpage: 5
 
 
+pets:
+    name: Pets
+    singular_name: Pet
+    fields:
+        name:
+            type: text
+            class: large
+            group: content
+        slug:
+            type: slug
+            uses: name
+        selectfield:
+            type: select
+            values: [ cat, dog, bar ]
+        image:
+            type: image
+            label: "Nice picture"
+            placeholder: https://source.unsplash.com/1280x768/?cat,dogs/__random__
+        teaser:
+            type: html
+            height: 150px
+        marky:
+            type: markdown
+        body:
+            type: html
+            height: 300px
+            allowtwig: true
+        textarea:
+            type: textarea
+            postfix: "This is a plain text area. the contents will <em><strong>not</em></strong> be processed."
+        checkbox:
+            type: checkbox
+            label: "This is a checkbox"
+        template:
+            type: templateselect
+            filter: '*.twig'
+    taxonomy: [ groups ]
+    recordsperpage: 5
+
+
 # Entries can be used for things like 'news' or 'blogpostings'. They have a
 # 'teaser', which can be used for a short blurb on listing-pages, allowing
 # visitors to click-through to the rest of the entry. It also has fields for an

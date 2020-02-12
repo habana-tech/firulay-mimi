@@ -2,8 +2,8 @@
 # in the project root. 
 
 # The name of the website
-sitename: Bolt Project Website
-payoff: The amazing payoff goes here
+sitename: Firulay & Mimi
+payoff: Helping a friend in need
 
 secret: '%env(APP_SECRET)%'
 
@@ -45,7 +45,7 @@ maintenance: [ blocks/503-maintenance-mode, 'helpers/page_503.html.twig' ]
 # canonical, so its clear which is the primary address of the site.
 #
 # If you include `https://`, it will be included in the canonical urls.
-#canonical: example.org
+canonical: https://firulay-mimi.com
 
 # Bolt can insert a <link rel="shortcut icon"> for all pages on the site.
 
@@ -151,10 +151,10 @@ accept_media_types: [ gif, jpg, jpeg, png, svg, pdf, mp3, tiff ]
 # it will only be accessible through the value set in path.
 # Keep the path simple: lowercase only, no extra slashes or other special
 # characters.
-# branding:
-#     name: SuperCMS
-#     path: /admin
-#     provided_by: [ supercool@example.org, "Supercool Webdesign Co." ]
+branding:
+    name: Firulay & Mimi
+    path: /admin
+    provided_by: [ dev@firulay-mimi.com, "HabanaTech.com Co." ]
 
 # There are several options for giving editors more options to insert images,
 # video, etc in the WYSIWYG areas. But, as you give them more options, that
@@ -174,7 +174,7 @@ wysiwyg:
     underline: false         # Adds a button to underline text, using the `<u>`-tag.
     ruler: false             # Adds a button to add a horizontal ruler, using the `<hr>`-tag.
     strike: false            # Adds a button to add stikethrough, using the `<s>`-tag.
-    blockquote: false        # Allows the user to insert blockquotes using the `<blockquote>`-tag.
+    blockquote: true        # Allows the user to insert blockquotes using the `<blockquote>`-tag.
     codesnippet: false       # Allows the user to insert code snippets using `<pre><code>`-tags.
     specialchar: false       # Adds a button to insert special chars like € or ™.
     clipboard: false         # Adds buttons to undo and redo.
@@ -186,4 +186,4 @@ wysiwyg:
 
 # Enforcing the use of SSL. If set, all pages will enforce an SSL connection,
 # and redirect to HTTPS if you attempt to visit plain HTTP pages.
-# enforce_ssl: true
+enforce_ssl: true
