@@ -21,7 +21,7 @@ homepage:
                 in the webbrowser, edit <code>sitename:</code> in the configuration file.
         image:
             type: image
-            placeholder: https://source.unsplash.com/1920x640/?cityscape,landscape,nature/__random__
+            placeholder: https://source.unsplash.com/1920x640/?cats,dogs,pets/__random__
         teaser:
             type: html
             localize: true
@@ -41,7 +41,7 @@ homepage:
             group: meta
     viewless: true
     taxonomy: [ categories, tags, foobars ]
-    locales: ['en', 'nl', 'pt_BR', 'es']
+    locales: ['en', 'es', 'de']
     singleton: true
     default_status: published
     icon_many: "fa:home"
@@ -107,16 +107,17 @@ pets:
             uses: name
         selectfield:
             type: select
-            values: [ cat, dog, bar ]
+            values: [ cat, dog, other ]
         image:
             type: image
             label: "Nice picture"
             placeholder: https://source.unsplash.com/1280x768/?cat,dogs/__random__
+        gallery:
+            type: imagelist
+            label: "Pet gallery"
         teaser:
             type: html
             height: 150px
-        marky:
-            type: markdown
         body:
             type: html
             height: 300px
@@ -124,12 +125,12 @@ pets:
         textarea:
             type: textarea
             postfix: "This is a plain text area. the contents will <em><strong>not</em></strong> be processed."
-        checkbox:
+        adoption_ready:
             type: checkbox
-            label: "This is a checkbox"
+            label: "This pet is ready for Adoption"
         template:
             type: templateselect
-            filter: '*.twig'
+            filter: 'pets/*.twig'
     taxonomy: [ groups ]
     recordsperpage: 5
 
