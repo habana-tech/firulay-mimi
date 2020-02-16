@@ -1,0 +1,26 @@
+{
+  "name": "firulay-mimi",
+  "version": "1.0.0",
+  "description": "Firulay & Mimi website",
+  "main": "assets/js/index.js",
+  "dependencies": {
+    "animejs": "^3.1.0",
+    "foundation-sites": "^6.6.1"
+  },
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.28.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/habana-tech/firulay-mimi.git"
+  },
+  "author": "HabanaTech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/habana-tech/firulay-mimi/issues"
+  },
+  "homepage": "https://github.com/habana-tech/firulay-mimi#readme"
+}
