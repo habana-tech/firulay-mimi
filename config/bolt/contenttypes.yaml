@@ -43,7 +43,6 @@ homepage:
     taxonomy: [ categories, tags, foobars ]
     locales: ['en', 'es', 'de']
     singleton: true
-    default_status: published
     icon_many: "fa:home"
     icon_one: "fa:home"
 
