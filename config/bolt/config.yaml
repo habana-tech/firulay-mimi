@@ -12,7 +12,8 @@ secret: '%env(APP_SECRET)%'
 # Dont edit the provided templates directly, because they _will_ get updated
 # in next releases. If you wish to modify a default theme, copy its folder, and
 # change the name here accordingly.
-theme: base-2018
+theme: firumimi
+#theme: base-2018
 
 # The locale that'll be used by the application. If no locale is set the
 # fallback locale is en_GB. For available options, see:
@@ -152,8 +153,8 @@ accept_media_types: [ gif, jpg, jpeg, png, svg, pdf, mp3, tiff ]
 # Keep the path simple: lowercase only, no extra slashes or other special
 # characters.
 branding:
-    name: Firulay & Mimi
-    path: /admin
+    name: 'Firulay and Mimi'
+    path: /dashboard
     provided_by: [ dev@firulay-mimi.com, "HabanaTech.com Co." ]
 
 # There are several options for giving editors more options to insert images,

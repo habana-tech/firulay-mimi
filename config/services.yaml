@@ -6,7 +6,7 @@ parameters:
     app_locales: en|nl|es|fr|de|hu|pl|it|pt_BR
     app.notifications.email_sender: anonymous@example.com
     bolt.table_prefix: bolt_
-    bolt.backend_url: /bolt
+    bolt.backend_url: /dashboard
 
 services:
     # default configuration for services in *this* file

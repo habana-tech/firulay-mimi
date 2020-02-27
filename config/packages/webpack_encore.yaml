@@ -1,4 +1,7 @@
 webpack_encore:
     # The path where Encore is building the assets.
     # This should match Encore.setOutputPath() in webpack.config.js.
-    output_path: '%kernel.project_dir%/public/assets'
+    output_path: '%kernel.project_dir%/public/assets/'
+    builds:
+        firulay: '%kernel.project_dir%/public/theme/firumimi/assets/build/'
+        backend: '%kernel.project_dir%/public/assets/'
