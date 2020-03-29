@@ -171,7 +171,7 @@ wysiwyg:
     fontcolor: false         # Allow users to mess around with font coloring.
     align: false             # Adds buttons for align left, align right, etc.
     subsuper: false          # Adds buttons for subscript and superscript, using `<sub>` and `<sup>`.
-    embed: false             # Allows the user to insert embedded videos from Youtube, Vimeo, etc.
+    embed: true             # Allows the user to insert embedded videos from Youtube, Vimeo, etc.
     underline: false         # Adds a button to underline text, using the `<u>`-tag.
     ruler: false             # Adds a button to add a horizontal ruler, using the `<hr>`-tag.
     strike: false            # Adds a button to add stikethrough, using the `<s>`-tag.
