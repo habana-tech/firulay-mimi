@@ -3,8 +3,8 @@
 parameters:
     locale: 'en'
     # This parameter defines the codes of the locales (languages) enabled in the application
-    app_locales: en|nl|es|fr|de|hu|pl|it|pt_BR
-    app.notifications.email_sender: anonymous@example.com
+    app_locales: en|es|fr|de
+    app.notifications.email_sender: dev@firulay-mimi.com
     bolt.table_prefix: bolt_
     bolt.backend_url: /dashboard
 

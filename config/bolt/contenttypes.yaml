@@ -41,7 +41,7 @@ homepage:
             group: meta
     viewless: true
     taxonomy: [ categories, tags, foobars ]
-    locales: ['en', 'es', 'de']
+    locales: [en, es, fr, de]
     singleton: true
     icon_many: "fa:home"
     icon_one: "fa:home"
@@ -64,9 +64,11 @@ pages:
             type: text
             class: large
             group: content
+            localize: true
         slug:
             type: slug
             uses: title
+            localize: true
         image:
             type: image
             label: "Eén plaatje"
@@ -74,15 +76,14 @@ pages:
         teaser:
             type: html
             height: 150px
+            localize: true
         marky:
             type: markdown
         body:
             type: html
             height: 300px
             allowtwig: true
-        textarea:
-            type: textarea
-            postfix: "This is a plain text area. the contents will <em><strong>not</em></strong> be processed."
+            localize: true
         checkbox:
             type: checkbox
             label: "This is a checkbox"
@@ -90,6 +91,7 @@ pages:
             type: templateselect
             filter: '*.twig'
     taxonomy: [ groups ]
+    locales: [en, es, fr, de]
     recordsperpage: 5
 
 
