@@ -101,14 +101,19 @@ pets:
     fields:
         name:
             type: text
-            class: large
+            class: short
             group: content
+            required: true
+        specie:
+            type: select
+            values: [ Cat, Dog, Other ]
+            required: true
         slug:
             type: slug
             uses: name
-        selectfield:
-            type: select
-            values: [ cat, dog, other ]
+            required: true
+            unique: true
+
         image:
             type: image
             label: "Nice picture"
@@ -119,20 +124,20 @@ pets:
         teaser:
             type: html
             height: 150px
+            localize: true
         body:
             type: html
             height: 300px
             allowtwig: true
-        textarea:
-            type: textarea
-            postfix: "This is a plain text area. the contents will <em><strong>not</em></strong> be processed."
+            localize: true
         adoption_ready:
             type: checkbox
             label: "This pet is ready for Adoption"
         template:
             type: templateselect
-            filter: 'pets/*.twig'
-    taxonomy: [ groups ]
+            filter: 'pets_*.twig'
+    taxonomy: [ groups, tags ]
+    locales: [en, es, fr, de]
     recordsperpage: 5
 
 
@@ -184,6 +189,7 @@ entries:
     records_per_page: 10
     icon_many: "fa:file-alt"
     icon_one: "fa:file-alt"
+    locales: [en, es, fr, de]
 
 # The 'Blocks' ContentType is a so-called 'resource ContentType'. This means
 # that it can be used to manage smaller pieces of content, like the 'about us'
@@ -213,6 +219,7 @@ blocks:
     searchable: false
     icon_many: "fa:cubes"
     icon_one: "fa:cube"
+    locales: [en, es, fr, de]
 
 # Possible field types:
 #
