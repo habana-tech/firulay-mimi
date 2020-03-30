@@ -10,3 +10,6 @@ services:
     Bolt\NewsWidget\:
         resource: '../vendor/bolt/newswidget/src/*'
         exclude: '../vendor/bolt/newswidget/src/{Entity,Exception}'
+    BobdenOtter\GoogleAnalytics\:
+        resource: '../vendor/bobdenotter/google-analytics-widget/src/*'
+        exclude: '../vendor/bobdenotter/google-analytics-widget/src/{Entity,Exception}'
