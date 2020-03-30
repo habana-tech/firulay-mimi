@@ -11,8 +11,7 @@
         "bolt/themes": "^3.1",
         "symfony/flex": "^1.6",
         "symfony/messenger": "^4.4",
-        "symfony/webpack-encore-bundle": "^1.7",
-        "bobdenotter/google-analytics-widget": "^1.0"
+        "symfony/webpack-encore-bundle": "^1.7"
     },
     "autoload": {
         "psr-4": {
