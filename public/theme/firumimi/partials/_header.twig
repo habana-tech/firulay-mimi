@@ -1,0 +1,62 @@
+<!-- Header bar -->
+<header id="header" class="topbar-sticky-shrink-header">
+    {# the values in the 'config' object are taken directly from the file app/config/config.yml #}
+{#    <h2><a href="{{ path('homepage') }}">{{ config.get('general/sitename') }}</a></h2>#}
+{#    {% if config.has('general/payoff') %}#}
+{#        <p>{{ config.get('general/payoff') }}</p>#}
+{#    {% endif %}#}
+
+<div data-sticky-container>
+  <div data-sticky data-margin-top='0' data-top-anchor="content:top" data-btm-anchor="content:bottom">
+    <div class="top-bar topbar-sticky-shrink" id="navbar-line">
+      <div class="top-bar-title">
+        <a href="{{ path('homepage') }}" title="Go to Homepage">
+           <img src="{{ asset('assets/images/logo.png')}}" alt="{{ config.get('general/sitename') }}
+            {% if config.has('general/payoff') %}
+                - {{ config.get('general/payoff') }}
+            {% endif %}"/>
+        </a>
+
+      </div>
+
+
+      <div class="title-bar" data-responsive-toggle="header-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle="header-menu"></button>
+  <div class="title-bar-title"></div>
+  </div>
+
+<div class="top-bar" id="header-menu">
+  <div class="top-bar-left">
+
+    {{ menu('social', template = 'partials/_social_menu.twig') }}
+    {{ menu(template = 'partials/_sub_menu.twig') }}
+
+
+{#    <ul class="dropdown menu" data-dropdown-menu>#}
+{#      <li class="menu-text">Site Title</li>#}
+{#      <li>#}
+{#        <a href="#">One</a>#}
+{#        <ul class="menu vertical">#}
+{#          <li><a href="#">One</a></li>#}
+{#          <li><a href="#">Two</a></li>#}
+{#          <li><a href="#">Three</a></li>#}
+{#        </ul>#}
+{#      </li>#}
+{#      <li><a href="#">Two</a></li>#}
+{#      <li><a href="#">Three</a></li>#}
+{#    </ul>#}
+  </div>
+  <div class="top-bar-right">
+
+     {% include 'helpers/_languageselect.html.twig' with {'type': 'select'} %}
+
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+{#    <hr>#}
+{#</header>#}

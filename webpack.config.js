@@ -26,6 +26,7 @@ Encore
 
 
     .addEntry('app', './public/theme/firumimi/assets/js/app.js')
+    .addStyleEntry('home', './public/theme/firumimi/assets/css/home/index.scss')
 
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.

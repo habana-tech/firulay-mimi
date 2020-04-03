@@ -1,0 +1,39 @@
+   {# The next section iterates over all of the content types, and prints a list
+        of the five latest records of each of them. The 'magic' happens in the
+        setcontent tag.. ct.slug ~ "/latest/3" concatenates the slug of the
+        content type with /latest/3, so it becomes something like "pages/latest/3".
+        The 'else' in the inner for-loop is only used if there are no 'records',
+        so we can use it to print a helpful message.
+        Lastly, "path('listing', {'contentTypeSlug': ct.slug})" will output something like '/pages',
+        effectively creating a working link to that contenttpye's listing page. #}
+
+        {% set ct =  config.get('contenttypes').pets %}
+        {% setcontent records = 'pets' ~ "/latest/9" %}
+
+        <div class="header-grid regular-grid pets-grid">
+            {% for record in records %}
+                <div class="block pets-grid-item">
+                    <img src="{{ record|thumbnail(300, 300) }}" title="{{ record|title }}">
+                     <a href="{{ record|link(true) }}">{{ record|title }} - {{ record|link }}</a>
+                </div>
+
+
+
+            {% else %}
+                {{ __('contenttypes.generic.no-recent', {'%contenttype%': ct.slug}) }}
+            {% endfor %}
+        </div>
+
+
+
+{#  <div id="b2" class="block"></div>#}
+{#  <div id="b3" class="block"></div>#}
+{#  <div id="b4" class="block"></div>#}
+{#  <div class="bottom-block">#}
+{#    <div id="b5" class="block"></div>#}
+{#    <div id="b6" class="block"></div>#}
+{#    <div id="b7" class="block"></div>#}
+{#  </div>#}
+
+
+        <p><a href="{{ path('listing', {'contentTypeSlug': ct.slug}) }}">{{ __('contenttypes.generic.overview',{'%contenttypes%': ct.name}) }} &raquo;</a></p>
