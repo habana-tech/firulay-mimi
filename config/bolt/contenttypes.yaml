@@ -16,16 +16,24 @@ homepage:
             label: Title
             postfix: |
                 The 'Homepage' can contain basic information about the website. This title will be
-                shown on the homepage of the website, as the name implies. To change the
-                <em><strong>name</strong></em> of the site, as is shown in the header, and the tab
-                in the webbrowser, edit <code>sitename:</code> in the configuration file.
-        image:
-            type: image
-            placeholder: https://source.unsplash.com/1920x640/?cats,dogs,pets/__random__
+                shown on the homepage of the website, as the name implies.
+
         teaser:
             type: html
             localize: true
             height: 150px
+
+        actionlink:
+            type: text
+            label: Link
+            placeholder: 'page/donate or http://example.org/'
+            postfix: "Use this to add a link for action on Homepage. This could either be an 'internal' link like <tt>page//about</tt>. Otherwise use a proper URL, like `http://example.org`."
+
+
+        image:
+            type: image
+            placeholder: https://source.unsplash.com/1920x640/?cats,dogs,pets/__random__
+
         content:
             type: html
             height: 300px

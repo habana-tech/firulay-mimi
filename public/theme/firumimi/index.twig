@@ -4,12 +4,28 @@
     {{ parent() }}
     {{ encore_entry_link_tags('home', null, 'firulay') }}
 {% endblock %}
+
+
+{% block scripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('home', null, 'firulay') }}
+{% endblock %}
+
 {% block main %}
 
     {% if record|default %}
 
-        {{ include('partials/index/_pets_grid.twig') }}
-        <h1><a href="{{ record|link }}">{{ record|title }}</a></h1>
+        <section id="home-hero">
+            <div class="main">
+                 <h1>{{ record.teaser }}</h1>
+
+                 <p><a href="{{ path('listing', {'contentTypeSlug': 'pets'}) }}">{{ __('contenttypes.generic.overview',{'%contenttypes%': 'Pets'}) }} &raquo;</a></p>
+
+            </div>
+            <div class="grid">
+                {{ include('partials/index/_pets_grid.twig') }}
+            </div>
+        </section>
 
 
         {{ record|excerpt }}

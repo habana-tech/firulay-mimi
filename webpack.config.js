@@ -26,7 +26,7 @@ Encore
 
 
     .addEntry('app', './public/theme/firumimi/assets/js/app.js')
-    .addStyleEntry('home', './public/theme/firumimi/assets/css/home/index.scss')
+    .addEntry('home', './public/theme/firumimi/assets/js/home/index.js')
 
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
@@ -85,7 +85,6 @@ Encore
 const firulay = Encore.getWebpackConfig();
 // Set a unique name for the config (needed later!)
 firulay.name = 'firulay';
-
 
 // reset Encore to build the second config
 Encore.reset();
