@@ -1,13 +1,11 @@
-{# The main menu loop: Iterates over the items, calling `display_menu_item` #}
-<ul class="social-menu navbar-nav container">
+<ul class="main-menu navbar-nav">
     {% for item in menu %}
-    <li
-        class="mr-3 mr-lg-1 nav-item index-{{ loop.index }} {{ loop.first ? ' first': '' }} {{ loop.last ? ' last' : '' -}}">
+    <li class="nav-item index-{{ loop.index }} {{ loop.first ? ' first': '' }} {{ loop.last ? ' last' : '' -}}">
         <a href="{{ item.uri }}" title='{{ item.title }}' class='nav-link {{ item.class }}'>
             {% if item.class == 'social' %}
             <i class="social fab fa-lg fa-{{item.label}}"></i>
             {% else %}
-            {{- item.title -}}{{- item.label -}}
+            {{- item.label -}}
             {% endif %}
         </a>
     </li>

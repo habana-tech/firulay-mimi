@@ -1,41 +1,42 @@
 {% extends 'partials/_master.twig' %}
 
 {% block styles %}
-    {{ parent() }}
-    {{ encore_entry_link_tags('home', null, 'firulay') }}
+{{ parent() }}
+{{ encore_entry_link_tags('home', null, 'firulay') }}
 {% endblock %}
 
 
 {% block scripts %}
-    {{ parent() }}
-    {{ encore_entry_script_tags('home', null, 'firulay') }}
+{{ parent() }}
+{{ encore_entry_script_tags('home', null, 'firulay') }}
 {% endblock %}
 
 {% block main %}
 
-    {% if record|default %}
+{% if record|default %}
 
-        <section id="home-hero">
-            <div class="main">
-                 <h1>{{ record.teaser }}</h1>
+<section id="home-hero">
+    <div class="main">
+        <h1>{{ record.teaser }}</h1>
 
-                 <p><a href="{{ path('listing', {'contentTypeSlug': 'pets'}) }}">{{ __('contenttypes.generic.overview',{'%contenttypes%': 'Pets'}) }} &raquo;</a></p>
+        <p><a href="{{ path('listing', {'contentTypeSlug': 'pets'}) }}">{{ __('contenttypes.generic.overview',{'%contenttypes%': 'Pets'}) }}
+                &raquo;</a></p>
 
-            </div>
-            <div class="grid">
-                {{ include('partials/index/_pets_grid.twig') }}
-            </div>
-        </section>
+    </div>
+    <div class="grid">
+        {{ include('partials/index/_pets_grid.twig') }}
+    </div>
+</section>
 
 
-        {{ record|excerpt }}
+{{ record|excerpt }}
 
-        {% include 'partials/_image.twig' with ({'image': record|image}) %}
+{% include 'partials/_image.twig' with ({'image': record|image}) %}
 
-        {{ record.content }}
+{{ record.content }}
 
-        {{ include('partials/_recordfooter.twig', { 'record': record }) }}
+{{ include('partials/_recordfooter.twig', { 'record': record }) }}
 
-    {% endif %}
+{% endif %}
 
 {% endblock main %}

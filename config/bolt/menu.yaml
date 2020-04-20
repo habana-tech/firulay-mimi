@@ -2,25 +2,19 @@
 # details: https://docs.bolt.cm/configuration/menus
 
 main:
-  - link: blocks/about
-    label: About
-  - path: page/how-to-help
   - label: Home
-    title: This is the <b>first<b> menu item.
-    class: homepage
+    title: Home
+    path: homepage
     submenu:
         - label: Sub 1
           link: entry/29
         - label: Sub 2
           class: menu-item-class
           link: entry/30
-#        - label: Sub 3
-#          link: entry/31
-#        - label: Sub 4
-#          class: sub-class
-#          link: page/32
-  - label: All pages
-    link: /pages
+  - label: About
+    path: blocks/about
+  - label: Contribute
+    path: page/how-to-help
 #  - label: The Bolt site
 #    link: https://bolt.cm
 #    class: bolt-site
@@ -28,7 +22,8 @@ main:
 
 social:
     - path: page/donate
-      class: button
+      class: 'btn btn-sm btn-primary btn-donate'
+      label: Donate
     - link: https://facebook.com/firulay-mimi
       class: social
       label: facebook

@@ -1,4 +1,5 @@
-assets/
+/assets
+theme/firumimi/assets/build
 theme/base*
 theme/skeleton
 thumbs/
