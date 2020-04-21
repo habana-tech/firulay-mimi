@@ -1,0 +1,3 @@
+[submodule "public/theme/firumimi/assets/build"]
+	path = public/theme/firumimi/assets/build
+	url = https://github.com/habana-tech/firumimi-theme-build.git
