@@ -19,6 +19,10 @@
     {% block styles %}
     {{ encore_entry_link_tags('app', null, 'firulay') }}
     {% endblock %}
+
+    {# A minimal polyfill with most essential stuff, https://github.com/thednp/minifill#}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/minifill/0.0.4/minifill.min.js"></script>
+
 </head>
 
 <body>
