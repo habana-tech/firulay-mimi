@@ -1,0 +1,25 @@
+@import "../global/grid-staggered";
+@import "pets-grid";
+
+#home-hero{
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  & .main{
+    border: 3px solid rgba(0,0,0,.2);
+    align-items: center;
+    align-content: space-around;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  & .grid{
+    border: 3px solid rgba(255,0,0,.2);
+    flex-basis: 400px;
+  }
+  & > div{
+    flex: 1 1 min-content;
+  }
+}
