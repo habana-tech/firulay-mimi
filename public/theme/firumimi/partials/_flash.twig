@@ -1,10 +1,13 @@
-{% for bag in ['success', 'info', 'warning', 'alert'] %}
+<aside class="alerts-wrap">
+  {% for bag in ['success', 'info', 'warning', 'danger'] %}
   {% for message in app.flashes(bag) %}
-    <div data-closable class="callout alert-callout-subtle {{bag}}">
-      {{ message }}
-      <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-        <span aria-hidden="true">⊗</span>
-      </button>
-    </div>
+    <div class="alert alert-{{bag}} alert-dismissible fade show" role="alert">
+  {{ message }}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
   {% endfor %}
 {% endfor %}
+</aside>
+

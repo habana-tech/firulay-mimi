@@ -22,6 +22,9 @@ class TestController extends AbstractController
     public function test()
     {
         
+        $this->addFlash('info', "Whenever you need to, be sure to use margin utilities to keep things nice and ");
+        $this->addFlash('warning', "Whenever you need to, be sure to use margin utilities to keep things nice and ");
+
         return new Response('hola');
     }
 

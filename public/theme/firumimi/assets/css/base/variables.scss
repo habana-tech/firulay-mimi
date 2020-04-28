@@ -9,3 +9,29 @@ $success-color: #1cba6a;
 $alert-color: #ff414b;
 $warning-color: #fffa4b;
 $primary-color: #000;
+
+
+
+//------------ Custom Bootstrap Theme --------------//
+
+$primary:       #c82623;
+$secondary:     #7c100e;
+//$success:       $green !default;
+//$info:          $cyan !default;
+//$warning:       $yellow !default;
+//$danger:        $red !default;
+$light:         #fafafa;
+$dark:          $secondary;//#212121;
+
+$hr-border-color: $secondary;
+
+body{
+  color: $secondary;
+
+  a{
+    color: $primary;
+    &:active, &:hover{
+      color: $secondary;
+    }
+  }
+}

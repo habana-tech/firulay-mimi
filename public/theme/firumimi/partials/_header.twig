@@ -1,23 +1,20 @@
 <header id="header">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light  ">
         <a class="navbar-brand flex-grow-1" href="{{ path('homepage') }}">
-            {{ config.get('general/sitename') }}
+            <img src="{{ asset('assets/images/logo.png') }}" alt="{{ config.get('general/sitename') }}
             {% if config.has('general/payoff') %}
             - {{ config.get('general/payoff') }}
-            {% endif %}
+            {% endif %}" class="d-inline-block align-top" >
+
         </a>
 
-        <div class="social-md-menu d-none d-md-flex d-lg-none">
-            {{ menu('social', template = 'partials/_social_menu.twig') }}
-        </div>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="mainMenuNavbar"
+            aria-controls="mainMenuNavbar" aria-expanded="false" aria-label="Toggle navigation"
             v-on:click="openNavMenu($event)">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse flex-grow-0" id="mainMenuNavbar">
             {{ menu('main', template = 'partials/_main_menu.twig') }}
             <span class="d-none d-lg-block navbar-text mx-3">|</span>
             <div class="social-sm-menu d-md-none d-lg-block">

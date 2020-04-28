@@ -1,0 +1,51 @@
+
+#header {
+    nav {
+        .social-menu {
+            .btn-donate {
+                font-weight: bold;
+                color: rgba(255, 255, 255, 0.7);
+                line-height: 1 !important;
+                &:hover {
+                    color: rgba(255, 255, 255, 1);
+                }
+            }
+        }
+        .social-md-menu {
+            .social-menu {
+                flex-direction: row !important;
+                .btn-donate {
+                    padding-right: 0.5rem !important;
+                    padding-left: 0.5rem !important;
+                }
+            }
+        }
+        .navbar-toggler {
+            border: none !important;
+        }
+        .navbar-collapse {
+            &.show {
+                .social-sm-menu {
+                    .social-menu {
+                        flex-direction: row !important;
+                        justify-content: left !important;
+                        margin-right: 0 !important;
+                        margin-left: 0 !important;
+                        .btn-donate {
+                            padding-right: 0.5rem !important;
+                            padding-left: 0.5rem !important;
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-brand{
+            & img{
+                height: 3em;
+                max-height: 200px;
+            }
+        }
+    }
+
+
+}

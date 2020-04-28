@@ -5,11 +5,11 @@
 {{ encore_entry_link_tags('home', null, 'firulay') }}
 {% endblock %}
 
-
 {% block scripts %}
 {{ parent() }}
 {{ encore_entry_script_tags('home', null, 'firulay') }}
 {% endblock %}
+
 
 {% block main %}
 
@@ -19,8 +19,15 @@
     <div class="main">
         <h1>{{ record.teaser }}</h1>
 
-        <p><a href="{{ path('listing', {'contentTypeSlug': 'pets'}) }}">{{ __('contenttypes.generic.overview',{'%contenttypes%': 'Pets'}) }}
-                &raquo;</a></p>
+{#        LINK to pets page #}
+{#        <p><a href="{{ path('listing', {'contentTypeSlug': 'pets'}) }}">{{ __('contenttypes.generic.overview',{'%contenttypes%': 'Pets'}) }}#}
+{#                &raquo;</a></p>#}
+
+{#        OR#}
+{#        LINK to adoption page#}
+        <p>
+            <a href="#adoption" class="btn btn-primary bg-primary" role="button" aria-label="{{  'label.go.to.adoption' | trans }}">{{  'label.go.to.adoption' | trans }}</a>
+        </p>
 
     </div>
     <div class="grid">

@@ -1,6 +1,8 @@
+//Boostrap plugins on use
+import 'bootstrap/js/dist/alert'
 // Change to bootstrap.min in production
+
 import '../css/app.scss';
-//import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import Vue from 'vue';
 

@@ -10,7 +10,7 @@
 {% set ct =  config.get('contenttypes').pets %}
 {% setcontent records = 'pets' ~ "/latest/9" %}
 
-<div class="header-grid regular-grid pets-grid">
+<div class="header-grid regular-grid pets-grid  full">
     {% for record in records %}
         <div class="block pets-grid-item">
             <img src="{{ record|thumbnail(400, 400) }}" title="{{ record|title }}" alt="[{{ record.specie }}] {{ record|title }}">

@@ -1,1 +1,5 @@
 site.phrase.devby: Develop by Habana.Tech
+label:
+  go:
+    to:
+      adoption: 'Adopt'
