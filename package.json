@@ -29,7 +29,7 @@
     "source-sans-pro": "^3.6.0",
     "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-scss": "^3.17.1",
-    "terser": "^4.6.11",
+    "terser": "^4.8.1",
     "tinycolor2": "^1.4.1",
     "vue": "^2.6.11",
     "vue-flatpickr-component": "^8.1.5",
